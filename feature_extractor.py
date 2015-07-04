@@ -14,6 +14,8 @@ class FeatureExtractor(object):
         X_encoded = X_df
         path = os.path.dirname(__file__)
         data = pd.read_csv(os.path.join(path, "data_amadeus.csv"))
+        
+        X_encoded = data
 
         ###-------------------
         X_encoded = X_encoded.join(pd.get_dummies(X_encoded['Departure'], prefix='d'))
