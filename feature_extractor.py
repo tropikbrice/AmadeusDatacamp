@@ -13,7 +13,7 @@ class FeatureExtractor(object):
     def transform(self, X_df):
         X_encoded = X_df
         path = os.path.dirname(__file__)
-        data_weather = pd.read_csv(os.path.join(path, "data_amadeus.csv"))
+        data = pd.read_csv(os.path.join(path, "data_amadeus.csv"))
 
         ###-------------------
         X_encoded = X_encoded.join(pd.get_dummies(X_encoded['Departure'], prefix='d'))
